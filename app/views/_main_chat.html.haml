@@ -1,0 +1,97 @@
+.MainChat
+  .MainChat__Group
+    %p.group ビジネスをしたいグループ
+    %p.number 10人
+  .MainChat__Chat
+    .MainChat__Chat__Content
+      .MainChat__Chat__Content__Box
+        .Content--for--message
+          .Content
+            .items
+              %img{ src: "assets/image1.jpg", alt: "g" }
+              %p.name 加藤友章
+            .message_box
+              %p こんにちは
+        .Content--for--message
+          .Content
+            .items
+              %img{ src: "assets/image1.jpg", alt: "g" }
+              %p.name 佐藤太郎
+            .message_box
+              %p こんにちは、始めまして
+        .Content--for--message
+          .Content
+            .items
+              %img{ src: "assets/image1.jpg", alt: "g" }
+              %p.name 伊藤太郎
+            .message_box
+              %p こんにちは、お元気ですか？
+        .Content--for--message
+          .Content
+            .items
+              %img{ src: "assets/image1.jpg", alt: "g" }
+              %p.name 後藤太郎
+            .message_box
+              %p こんにちは、元気です。
+        .Content--for--message
+          .Content
+            .items
+              %img{ src: "assets/image1.jpg", alt: "g" }
+              %p.name 加藤太郎
+            .message_box
+              %p 皆さん元気そうでよかったです。
+        .Content--for--message
+          .Content
+            .items
+              %img{ src: "assets/image1.jpg", alt: "g" }
+              %p.name 佐藤太郎
+            .message_box
+              %p それでは、始めましょう。
+
+      .Message__Form
+        %input.FormMessage{type: 'text', placeholder: 'メッセージ'}
+        %label.FormSubmit
+          = icon('far', 'paper-plane', class: "Sendicon")
+          %input.Hidden{type: "submit"} 
+    .MainChat__Chat__Info
+      .Group__Name
+        ビジネスしたいグループ
+      .Group__Info
+        このグループはビジネスをしたいと考えている人たちのグループです。途上国の経験を生かしてビジネスをしたいと考えている人！集まれ！
+      .Group__btn
+        =link_to "#", class: "member" do
+          一覧
+        =link_to "#", class: "edit" do
+          編集
+  .MainChat__Event
+    .Event__Index
+      %p イベント情報
+      =link_to "#", class: "create" do
+        イベント作成
+    .Event__Line
+      .Event__Box
+        .Event--Info
+          ラオス 最終報告会
+        .Event--Date
+          2020年6月19日(金)
+        .Event--Time
+          15:00 ~ 16:00
+        .Image
+      .Event__Box
+        .Event--Info
+          ラオス ZOOM飲み会
+        .Event--Date
+          2020年6月19日(金)
+        .Event--Time
+          19:00 ~ 21:00
+        .Image
+      .Event__Box
+        .Event--Info
+          ラオス OV交流会
+        .Event--Date
+          2020年6月20日(土)
+        .Event--Time
+          12:00 ~ 16:00
+        .Image
+          
+

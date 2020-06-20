@@ -1,0 +1,32 @@
+.Header{
+  width: 100vw;
+  height: $header_height;
+  background-color: $base-blue;
+  .HeaderMain{
+    height: 80px;
+    p{
+      line-height: 80px;
+      font-size: 30px;
+      font-weight: bold;
+      margin-left: 20px;
+      color: $base_white;
+    }
+  }
+  .HeaderBottom{
+    height: 40px;
+    background-color: $base_blue_dark;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .HeaderMenu{
+      display: flex;
+      color: $base_white;
+      a{
+        display: block;
+        margin-right: 30px;
+        text-decoration: none;
+        color: $base_white;
+      }
+    }
+  }
+}
