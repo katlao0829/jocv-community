@@ -1,0 +1,30 @@
+.SideBar
+  .UserBox
+    .UserBox__Image
+      %img{ src: "assets/image1.jpg", alt: "g" }
+    .UserBox__Info
+      .User
+        %p.name 加藤友章
+        %p.country ラオス
+        %p.job コミュニティ開発
+      .Item--btn
+        =link_to "#", class: "edit--btn" do
+          編集
+        =link_to "#", class: "login" do
+          ログアウト
+  .GroupBox
+    .GroupBox__Choose
+      %p グループ検索
+      %input.FormSearch{type: 'text'}
+      %p グループ名
+    .GroupBox__Go
+      %input.FormSubmit{type: 'submit', value: 'コミュニティへ'}    
+  .DMessageBox
+    .DMessage
+      %p.title ダイレクトメッセージ
+    .DMessage--User
+      %p ◉佐藤太郎
+    .DMessage--User
+      %p ◉伊藤太郎
+    .DMessage--User
+      %p ◉後藤太郎
