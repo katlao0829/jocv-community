@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'messages/index'
   root "messages#index" #ログイン後別ページに飛びたい場合ここを変えれば良さげ！
   resources :users, only: [:edit, :update]
+  resources :groups, only: [:new, :create, :index]
 end

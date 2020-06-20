@@ -76,28 +76,19 @@
     }
     .GroupBox{
       padding: 20px 30px 20px 20px;
-      height: 150px;
+      height: 80px;
       text-align: center;
       border-top: 2px solid $base_blue_dark;
       border-bottom: 2px solid $base_blue_dark;
       border-radius: 10px;
-      &__Choose{
-        font-size: $font_middle;
-        .FormSearch{
-          width: 130px;
-          margin: 5px 0 8px 0;
-          border-color: #0f9ada;
-        }
-      
-      }
       &__Go{
-        input.FormSubmit{
+        .GroupIndex{
           @include btn-css();
-          font-size: $font_small;
+          font-size: $font_middle;
         }
-        input.FormSubmit:active{
+        .GroupIndex{
           @include btn-css-action();
-          font-size: $font_small;
+          font-size: $font_middle;
         }
       }
     }

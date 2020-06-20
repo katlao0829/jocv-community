@@ -16,12 +16,9 @@
         = link_to destroy_user_session_path, method: :delete, class: 'logout' do
           ログアウト
   .GroupBox
-    .GroupBox__Choose
-      %p グループ検索
-      %input.FormSearch{type: 'text'}
-      %p グループ名
     .GroupBox__Go
-      %input.FormSubmit{type: 'submit', value: 'コミュニティへ'}    
+      = link_to "groups", class: "GroupIndex" do 
+        グループ一覧
   .DMessageBox
     .DMessage
       %p.title ダイレクトメッセージ

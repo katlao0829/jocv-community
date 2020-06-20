@@ -1,0 +1,54 @@
+.Group__Function{
+  display: flex;
+  padding: 20px;
+  .SearchBox{
+    width: 600px;
+    height: 100%;
+    text-align: center;
+    border-color: #0f9ada;
+    border-radius: 10px;
+  }
+  .Btn{
+    @include btn-css();
+  }
+  .btn--create{
+    @include btn-css();
+    margin-left: 50px;
+  }
+}
+.Group__List{
+  height: 100%;
+  overflow: scroll;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  &__Box{
+    border: 2px solid $jica_color;
+    background-color: #D6E5E7;
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    .Group--Content{
+      .icon{
+        display: flex;
+        img{
+          height: 100px;
+          width: 120px;
+          border-radius: 5px;
+        }
+        p.info{
+          padding: 5px 10px;
+          font-size: $font_small;
+        }
+      }
+    }
+    .Group--Name{
+      text-align: center;
+      margin-top: 5px;
+      font-weight: bold;
+
+    }
+  }
+}
