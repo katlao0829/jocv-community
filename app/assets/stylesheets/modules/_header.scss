@@ -4,12 +4,15 @@
   background-color: $base-blue;
   .HeaderMain{
     height: 80px;
-    p{
+    p.title{
       line-height: 80px;
       font-size: 30px;
       font-weight: bold;
       margin-left: 20px;
       color: $base_white;
+    }
+    p.sub{
+      font-size: 15px;
     }
   }
   .HeaderBottom{

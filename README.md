@@ -48,7 +48,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|introduction|text|null: false|
+|info|text|null: false|
 |image|image||
 |user_id|integer||
 |group_message_id|integer||

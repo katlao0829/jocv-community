@@ -27,9 +27,10 @@
       }
       &__Info{
         display: flex;
-        .User{       
+        .User{
+          width: 130px;       
           p.name{
-            font-size: $font_large;
+            font-size: 15px;
             font-weight: bold;  
             padding-bottom: 10px;
           }
@@ -42,7 +43,6 @@
         }
         .Item--btn{
           font-size: 8px;
-          margin-left: 50px;
           margin-top: 20px;     
           text-align: center;     
           a.edit--btn{

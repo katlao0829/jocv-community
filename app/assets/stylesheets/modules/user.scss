@@ -9,11 +9,12 @@
     h2{
     font-size: $font_large;
     font-weight: bold;
+    border-bottom: 3px solid red;
     }
     .Button{
       text-decoration: none;
       @include btn-css();
-      left: 300px;
+      left: 275px;
       position: absolute;
     }  
   }
@@ -24,6 +25,12 @@
       margin-bottom: 20px;
       &__label--normal{
         left: 5px;
+      }
+      .User__image{
+        margin-top: 10px;
+        height: 130px;
+        width: 150px;
+        border-radius: 10px;
       }
       &__input--normal{
         .form-a{
@@ -49,6 +56,10 @@
           display: none;
         }
       }
+    }
+    .Update{
+      @include btn-css();
+      margin-left: 300px;
     }
     .actions{
       text-align: right;

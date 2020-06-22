@@ -1,0 +1,62 @@
+-# = render "./groups/group_head"
+.MainChat__Chat
+  .MainChat__Chat__Content
+    .MainChat__Chat__Content__Box
+      .Content--for--message
+        .Content
+          .items
+            %img{ src: "assets/image1.jpg", alt: "g" }
+            %p.name 加藤友章
+          .message_box
+            %p こんにちは
+      .Content--for--message
+        .Content
+          .items
+            %img{ src: "assets/image1.jpg", alt: "g" }
+            %p.name 佐藤太郎
+          .message_box
+            %p こんにちは、始めまして
+      .Content--for--message
+        .Content
+          .items
+            %img{ src: "assets/image1.jpg", alt: "g" }
+            %p.name 伊藤太郎
+          .message_box
+            %p こんにちは、お元気ですか？
+      .Content--for--message
+        .Content
+          .items
+            %img{ src: "assets/image1.jpg", alt: "g" }
+            %p.name 後藤太郎
+          .message_box
+            %p こんにちは、元気です。
+      .Content--for--message
+        .Content
+          .items
+            %img{ src: "assets/image1.jpg", alt: "g" }
+            %p.name 加藤太郎
+          .message_box
+            %p 皆さん元気そうでよかったです。
+      .Content--for--message
+        .Content
+          .items
+            %img{ src: "assets/image1.jpg", alt: "g" }
+            %p.name 佐藤太郎
+          .message_box
+            %p それでは、始めましょう。
+
+    .Message__Form
+      %input.FormMessage{type: 'text', placeholder: 'メッセージ'}
+      %label.FormSubmit
+        = icon('far', 'paper-plane', class: "Sendicon")
+        %input.Hidden{type: "submit"} 
+  .MainChat__Chat__Info
+    .Group__Name
+      ビジネスしたいグループ
+    .Group__Info
+      このグループはビジネスをしたいと考えている人たちのグループです。途上国の経験を生かしてビジネスをしたいと考えている人！集まれ！
+    .Group__btn
+      =link_to "#", class: "member" do
+        一覧
+      =link_to "#", class: "edit" do
+        編集

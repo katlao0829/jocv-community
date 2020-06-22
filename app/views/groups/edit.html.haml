@@ -4,7 +4,7 @@
     = render "./side_bar"
   .GroupForm
     .GroupForm__title
-      %h2 新規グループ作成
+      %h2 グループ編集
     .GroupForm__create
       = form_with model: @group, local: true do |f|
         = f.text_field :name, class: "form-a", placeholder: "グループ名を入力してください"
@@ -16,4 +16,4 @@
             = f.label :image do
               = icon('fas', 'portrait', class: "photo")
               = f.file_field :image, class: "hidden"
-        = f.submit "作成", class: "save-btn"
+        = f.submit "更新", class: "save-btn"

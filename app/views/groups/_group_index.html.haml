@@ -7,80 +7,12 @@
       = link_to "/groups/new", class: "btn--create" do 
         グループを作成
   .Group__List
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです。ぜひご参加ください。
-      .Group--Name
-        友達コミュニティ 
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです
-      .Group--Name
-        友達コミュニティ
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです
-      .Group--Name
-        友達コミュニティ
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです
-      .Group--Name
-        友達コミュニティ
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです
-      .Group--Name
-        友達コミュニティ
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです
-      .Group--Name
-        友達コミュニティ
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです
-      .Group--Name
-        友達コミュニティ
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです
-      .Group--Name
-        友達コミュニティ
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです
-      .Group--Name
-        友達コミュニティ
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです
-      .Group--Name
-        友達コミュニティ
-    .Group__List__Box
-      .Group--Content
-        .icon
-          %img{ src: "assets/image1.jpg", alt: "g" }
-          %p.info これは友達を作るコミュニティです
-      .Group--Name
-        友達コミュニティ
+    - @groups.each do |group|
+      .Group__List__Box
+        .Group--Content
+          .icon
+            = image_tag group.image.url
+            .info
+              = group.info
+        .Group--Name
+          = link_to "#{group.name}", group_path(group.id), method: :get
