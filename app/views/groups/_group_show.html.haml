@@ -7,15 +7,15 @@
       .GroupInfo
         = @group.info
     .GroupBtn
-      - @group.users.each do |user|
-        - if user_signed_in? && current_user.id == user.id
-          = link_to "チャット", messages_index_path
-          = link_to "編集", edit_group_path
+      - if @group.users.include?(current_user)
+        = link_to "チャット", group_messages_path(@group)
+        = link_to "編集", edit_group_path
 
   .MainChat__Info__Member
     .Member__btn
       %p メンバー
-      = link_to "参加", join_group_path(@group)
+      - unless @group.users.include?(current_user)
+        =link_to "参加", join_group_path(@group)
     - @group.users.each do |user|
       .MemberName
         = user.name

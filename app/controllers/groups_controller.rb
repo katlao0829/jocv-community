@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     if @group.save
-      redirect_to group_path
+      redirect_to "/groups/#{@group}"
     else
       render :new
     end
@@ -39,13 +39,16 @@ class GroupsController < ApplicationController
   def join
     @group = Group.find(params[:id])
     @group.users << current_user
-    @group.save
-    redirect_to group_path
+    if @group.save
+      redirect_to group_path
+    else
+      render :show, notice: 'すでに参加してます'
+    end
   end
 
   private
   def group_params
-    params.require(:group).permit(:name, :info, :image, user_ids: [])
+    params.require(:group).permit(:name, :info, :image, users_ids: [])
   end
 
   def set_group

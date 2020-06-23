@@ -62,7 +62,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |contents|text|null: false|
-|image|image||
 |user_id|integer||
 |group_id|integer||
 

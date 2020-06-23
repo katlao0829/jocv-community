@@ -52,7 +52,7 @@
                 width: 100%;
                 border-radius: 5px;
               }
-              p.name{
+              .user--name{
                 font-size: $font_small;
                 text-align: center;
               }
@@ -116,22 +116,13 @@
         position: absolute;
         bottom: 20px;
         right: 20px;
-        a.member{
+        a{
           text-decoration: none;
           color: black;
           @include btn-css();
         }
-        a.member:active{
+        a{
           @include btn-css-action();
-        }
-        a.edit{
-          margin-left: 15px;
-          text-decoration: none;
-          color: black;
-          @include btn-css();
-        }
-        a.edit:active{
-         @include btn-css-action();
         }
       }
     }
