@@ -1,10 +1,10 @@
 .MainChat{
-  overflow: hidden;
   height: 100%;
   width: calc(100vw - 250px);
   border-top: 10px solid $base_blue;
   border-right: 10px solid $base_blue;
   border-bottom: 10px solid $base_blue;
+  box-sizing: border-box;
   &__Group{
     height: 50px;
     padding: 10px;

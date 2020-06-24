@@ -17,5 +17,8 @@
       - unless @group.users.include?(current_user)
         =link_to "参加", join_group_path(@group)
     - @group.users.each do |user|
-      .MemberName
-        = user.name
+      .MemberList
+        .MemberImage
+          = image_tag user.image.url
+        .MemberName
+          = user.name

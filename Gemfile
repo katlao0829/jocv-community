@@ -66,3 +66,7 @@ gem 'devise'
 # image installation
 gem 'carrierwave'
 gem 'mini_magick'
+
+
+# kaminari pagenation
+gem 'kaminari'
