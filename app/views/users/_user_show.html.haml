@@ -1,0 +1,30 @@
+.MainChat__Info
+  .MainChat__Info__Introduction
+    .UserShow
+      = image_tag @user.image.url, class: "user--image"
+      .UserInfo
+        .UserInfoA
+          %span 名前：
+          = @user.name
+        .UserInfoA
+          %span  国　：
+          = @user.country
+        .UserInfoA
+          %span  職種：
+          = @user.job
+        .UserInfoB
+          %p  自己紹介
+          = @user.introduction
+    - unless current_user == @user
+      .UserDM
+        = link_to "ダイレクトメッセージ", "#"
+  .MainChat__Info__UserGroupList
+    .UserGroupLists
+      %p 所属グループ
+      - @user.groups.each do |group|
+        = link_to group_path(group.id) do
+          .UserGroups
+            .UserGroupImage
+              = image_tag group.image.url
+            .UserGroupName
+              = group.name

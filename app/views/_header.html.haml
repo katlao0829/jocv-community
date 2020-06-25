@@ -1,15 +1,11 @@
 .Header
   .HeaderMain
-    %p.title [JO場] JICA協力隊コミュニティ
-    %p.sub 
+    %p.title JO場 [JOVA]
+    %p.Sub ~JICA協力隊コミュニティ~
 
   .HeaderBottom
     .HeaderMenu
-      =link_to "#", class: "edit--btn" do
-        Top 
-      =link_to "#", class: "login" do
-        About
-      =link_to "#", class: "login" do
-        MyPage
-      =link_to "#", class: "login" do
-        MyGroup
+      =link_to "Top", root_path 
+      - if user_signed_in?
+        =link_to "MyPage", user_path(current_user.id)
+        =link_to "MyGroup", mygroup_group_path(current_user.id) 

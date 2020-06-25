@@ -1,5 +1,7 @@
 .MainChat{
   &__Group{
+    font-size: 20px;
+    font-weight: bold;
     &__Number{
       margin-left: 30px;
     }
@@ -10,7 +12,7 @@
     &__Introduction{
       width: 800px;
       padding: 20px;
-      border-right: 2px solid $base_blue_dark;
+      border-right: 5px solid $base_blue_dark;
       .GroupShow{
         display: flex;
         img{
@@ -42,6 +44,10 @@
         a{
           @include btn-css();
         }       
+      }
+      a{
+        text-decoration: none;
+        color: black;
       }
       .MemberList{
         display: flex;

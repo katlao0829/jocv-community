@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  before_action :user_params, only: [:update]
+
+  def top
+  end
   
   def edit
   end
@@ -9,6 +13,10 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   private

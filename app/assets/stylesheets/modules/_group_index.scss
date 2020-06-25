@@ -1,5 +1,6 @@
 .Group__Function{
   display: flex;
+  height: 10%;
   padding: 20px;
   box-sizing: border-box;
   .SearchBox{
@@ -19,7 +20,7 @@
 }
 .Group__List{
   box-sizing: border-box;
-  height: 100%;
+  height: 90%;
   padding: 20px;
   position: relative;
   display: flex;
@@ -41,9 +42,10 @@
     .Group--Content{
       .icon{
         display: flex;
+        overflow: hidden;
         img{
           height: 100px;
-          width: 120px;
+          width: 130px;
           border-radius: 5px;
         }
         .info{
@@ -64,7 +66,7 @@
   }
   .pagination{
     position: absolute;
-    bottom: 120px;
+    bottom: 10px;
     left: 20px;
   }
 }

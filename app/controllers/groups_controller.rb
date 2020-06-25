@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:show]
   before_action :group_params, only: [:create, :update]
 
+
   def index
     @groups = Group.all
     @groups = Group.page(params[:page]).per(9)
@@ -46,6 +47,12 @@ class GroupsController < ApplicationController
       render :show, notice: 'すでに参加してます'
     end
   end
+
+  def mygroup
+    @mygroups = current_user.groups
+    @mygroups = current_user.groups.page(params[:page]).per(9)
+  end
+
 
   private
   def group_params
