@@ -17,30 +17,34 @@
       border-bottom: 2px solid $base_blue_dark;
       border-radius: 10px;
       &__Image{
-        height: 150px;
-        width: 200px;
+        max-height: 130px;
+        max-width: 180px;
         overflow: hidden;
         text-align: center;
         .User__image{
-          height: 130px;
-          width: auto;
+          max-height: 130px;
+          max-width: 180px;
           border-radius: 10px;
         }
       }
       &__Info{
+        margin-top: 10px;
         display: flex;
         .User{
           width: 130px;       
           p.name{
             font-size: 15px;
             font-weight: bold;  
-            padding-bottom: 10px;
+            padding-bottom: 5px;
+          }
+          p.term{
+            font-size: 12px;
           }
           p.country{
-            font-size: $font_small;
+            font-size: 12px;
           }
           p.job{
-            font-size: $font_small;
+            font-size: 12px;
           }
         }
         .Item--btn{

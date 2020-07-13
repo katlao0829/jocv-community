@@ -3,7 +3,7 @@
     %input.SearchBox{type: 'search', placeholder: 'グループ検索'}
     %input.Btn{type: "submit", class: "btn--search", value: "検索"} 
   .Create
-    = link_to "/groups/new", class: "btn--create" do 
+    = link_to "/groups/new", class: "btn--create" do
       グループを作成
 .Group__List
   - @groups.each do |group|

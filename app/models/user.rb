@@ -7,6 +7,9 @@ class User < ApplicationRecord
   has_many :group_users
   has_many :groups, through: :group_users
   has_many :messages
+  has_many :directmessages, dependent: :destroy
+  has_many :entries, dependent: :destroy
+  
 
   validates :name, presence: true
   validates :country, presence: true

@@ -11,4 +11,7 @@ Rails.application.routes.draw do
       get :mygroup
     end
   end
+  resources :rooms, only: [:create, :show] do
+    resources :directmessages, only: [:create]
+  end
 end

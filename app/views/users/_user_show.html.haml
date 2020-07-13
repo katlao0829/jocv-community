@@ -7,7 +7,10 @@
           %span 名前：
           = @user.name
         .UserInfoA
-          %span  国　：
+          %span  隊次：
+          = @user.term
+        .UserInfoA
+          %span  派遣国：
           = @user.country
         .UserInfoA
           %span  職種：
@@ -16,8 +19,13 @@
           %p  自己紹介
           = @user.introduction
     - unless current_user == @user
-      .UserDM
-        = link_to "ダイレクトメッセージ", "#"
+      - if @isRoom == true
+        =link_to "DMを送る", "/rooms/#{@roomId}", class: "UserDM"
+      - else
+        = form_for @room do |f| 
+          = fields_for @entry do |e|
+            = e.hidden_field :user_id, :value=> @user.id
+          = f.submit "DMを送る", class: "UserDM"
   .MainChat__Info__UserGroupList
     .UserGroupLists
       %p 所属グループ

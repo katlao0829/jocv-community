@@ -6,6 +6,8 @@
       .User
         %p.name
           = current_user.name
+        %p.term
+          = current_user.term
         %p.country
           = current_user.country
         %p.job
@@ -22,9 +24,3 @@
   .DMessageBox
     .DMessage
       %p.title ダイレクトメッセージ
-    .DMessage--User
-      %p ◉佐藤太郎
-    .DMessage--User
-      %p ◉伊藤太郎
-    .DMessage--User
-      %p ◉後藤太郎

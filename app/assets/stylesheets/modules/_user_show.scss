@@ -8,6 +8,7 @@
     height: 300px;
     display: flex;
     &__Introduction{
+      position: relative;
       width: 800px;
       padding: 20px;
       border-right: 2px solid $base_blue_dark;
@@ -34,12 +35,16 @@
         }
       }
       .UserDM{
-        margin-top: 20px;
-        margin-left: 50px;
+        position: absolute;
+        left: 20px;
+        bottom: 0px;
         @include btn-css();
         a{
           text-decoration: none;
           color: white;
+          position: absolute;
+          left: 20px;
+          bottom: 0px;
         }
       }
     }
