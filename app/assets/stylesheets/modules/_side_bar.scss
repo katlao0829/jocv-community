@@ -10,39 +10,45 @@
     border-bottom: 10px solid $base_blue;
     border-left: 10px solid $base_blue;
     box-sizing: border-box;
+    background-image: url(/assets/36223.jpg);
     .UserBox{
       height: 250px;
       padding: 20px;
       border-bottom: 2px solid $base_blue_dark;
       border-radius: 10px;
       &__Image{
-        height: 150px;
-        width: 200px;
+        max-height: 130px;
+        max-width: 180px;
         overflow: hidden;
+        text-align: center;
         .User__image{
-          height: 130px;
-          width: 100%;
+          max-height: 130px;
+          max-width: 180px;
           border-radius: 10px;
         }
       }
       &__Info{
+        margin-top: 10px;
         display: flex;
-        .User{       
+        .User{
+          width: 130px;       
           p.name{
-            font-size: $font_large;
+            font-size: 15px;
             font-weight: bold;  
-            padding-bottom: 10px;
+            padding-bottom: 5px;
+          }
+          p.term{
+            font-size: 12px;
           }
           p.country{
-            font-size: $font_small;
+            font-size: 12px;
           }
           p.job{
-            font-size: $font_small;
+            font-size: 12px;
           }
         }
         .Item--btn{
           font-size: 8px;
-          margin-left: 50px;
           margin-top: 20px;     
           text-align: center;     
           a.edit--btn{
@@ -76,28 +82,19 @@
     }
     .GroupBox{
       padding: 20px 30px 20px 20px;
-      height: 150px;
+      height: 80px;
       text-align: center;
       border-top: 2px solid $base_blue_dark;
       border-bottom: 2px solid $base_blue_dark;
       border-radius: 10px;
-      &__Choose{
-        font-size: $font_middle;
-        .FormSearch{
-          width: 130px;
-          margin: 5px 0 8px 0;
-          border-color: #0f9ada;
-        }
-      
-      }
       &__Go{
-        input.FormSubmit{
+        .GroupIndex{
           @include btn-css();
-          font-size: $font_small;
+          font-size: $font_middle;
         }
-        input.FormSubmit:active{
+        .GroupIndex{
           @include btn-css-action();
-          font-size: $font_small;
+          font-size: $font_middle;
         }
       }
     }
