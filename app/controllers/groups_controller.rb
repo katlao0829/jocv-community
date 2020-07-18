@@ -54,6 +54,11 @@ class GroupsController < ApplicationController
     @mygroups = current_user.groups.page(params[:page]).per(9)
   end
 
+  def search
+    @group = Group.search(params[:keyword])
+    @groups = @group.page(params[:page]).per(9)
+  end
+
 
   private
   def group_params

@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     member do
       get :mygroup
     end
+    collection do
+      get 'search'
+    end
   end
   resources :rooms, only: [:create, :show] do
     resources :directmessages, only: [:create]
