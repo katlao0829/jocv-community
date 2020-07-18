@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: jocv_community_production
-  username: jocv_community
-  password: <%= ENV['JOCV_COMMUNITY_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
